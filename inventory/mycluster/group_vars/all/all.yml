@@ -60,7 +60,7 @@ loadbalancer_apiserver_healthcheck_port: 8081
 # https_proxy: ""
 
 ## Refer to roles/kubespray-defaults/defaults/main.yml before modifying no_proxy
-# no_proxy: ""
+no_proxy: ".svc,.svc.cluster.local"
 
 ## Some problems may occur when downloading files over https proxy due to ansible bug
 ## https://github.com/ansible/ansible/issues/32750. Set this variable to False to disable
@@ -93,3 +93,4 @@ loadbalancer_apiserver_healthcheck_port: 8081
 ## Set Pypi repo and cert accordingly
 # pyrepo_index: https://pypi.example.com/simple
 # pyrepo_cert: /etc/ssl/certs/ca-certificates.crt
+docker_version: 18.09
